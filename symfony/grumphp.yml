@@ -1,0 +1,20 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+        phpcsfixer2:
+            allow_risky: ~
+            cache_file: ~
+            config: '.php_cs.dist'
+            using_cache: ~
+            verbose: true
+            diff: true
+            triggered_by: ['php']
+        phpstan:
+            autoload_file: ~
+            configuration: ~
+            level: 2
+            force_patterns: []
+            ignore_patterns: []
+            triggered_by: ['php']
+            memory_limit: "-1"
